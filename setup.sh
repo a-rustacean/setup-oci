@@ -4,7 +4,7 @@ sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get install nodejs -y
 sudo apt-get install npm -y
-sudo apt-get install nginx
+sudo apt-get install nginx -y
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 source .bashrc
 nvm install 18
