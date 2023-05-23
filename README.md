@@ -1,4 +1,4 @@
-# setpu-oci
+# setup-oci
 
 ## About
 A simple script for setting up oci (oracle cloud instance) ubuntu 20.04 image
