@@ -20,7 +20,19 @@ cd /etc/nginx/
 sudo rm -rf sites-available/default
 sudo rm -rf sites-enabled/default
 cd sites-available
-sudo touch default-website.conf
+sudo echo "server {
+  listen 80;
+  listen [::]:80;
+  server_name example.com;
+
+  location / {
+    proxy_pass       http://localhost:3000;
+    proxy_set_header Host                   \$http_host;
+    proxy_set_header X-Forwarded-For        \$remote_addr;
+    proxy_set_header Upgrade                \$http_upgrade;
+    proxy_set_header Connection             \"Upgrade\";
+  }
+}" > default-website.conf
 sudo ln default-website.conf ../sites-enabled/default-website.conf 
 sudo snap install core
 sudo snap refresh core
