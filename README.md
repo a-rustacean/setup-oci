@@ -1,7 +1,7 @@
 # setup-oci
 
 ## About
-A simple script for setting up oci (oracle cloud instance) ubuntu 20.04 image
+A simple script for setting up oci (oracle cloud instance) ubuntu 20.04 and 22.04 image
 
 ## Usage
 ```
