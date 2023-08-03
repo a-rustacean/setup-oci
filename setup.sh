@@ -32,7 +32,7 @@ sudo echo "server {
   }
 }" > default-website.conf
 cd ..
-sudo ln $(pwd)/site-available/default-website.conf $(pwd)/sites-enabled/default-website.conf 
+sudo ln -s $(pwd)/sites-available/default-website.conf $(pwd)/sites-enabled/default-website.conf 
 sudo snap install core
 sudo snap refresh core
 sudo apt-get remove certbot -y
