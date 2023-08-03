@@ -9,6 +9,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" 
 nvm install --lts
+npm i -g run-rs
 sudo apt-get install firewalld -y
 sudo systemctl start firewalld
 sudo firewall-cmd --permanent --zone=public --add-port=80/tcp
