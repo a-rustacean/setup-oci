@@ -31,7 +31,8 @@ sudo echo "server {
     proxy_set_header Connection             \"Upgrade\";
   }
 }" > default-website.conf
-sudo ln default-website.conf ../sites-enabled/default-website.conf 
+cd ..
+sudo ln $(pwd)/site-available/default-website.conf $(pwd)/sites-enabled/default-website.conf 
 sudo snap install core
 sudo snap refresh core
 sudo apt-get remove certbot -y
